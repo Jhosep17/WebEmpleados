@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Datos de la empleado</title>
+<meta charset="UTF-8" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<br />
+		<div class="card border-primary bg">
+			<div class="card-header">
+				<a th:href="@{/}">Home</a>
+			</div>
+			<div class="card-body">
+				<form th:action="@{/guardar}" method="post" th:object="${empleado}">
+					<div class="row gx-5">
+						<div class="col">
+							<img src="https://i.ibb.co/xYsw6nC/empleado.jpg"
+								class="img-thumbnail" alt="empleado"
+								style="width: 400px; height: 350px; margin-left: 50px;">
+						</div>
+						<div class="col">
+							<input type="hidden" name="idEmpleado" th:field="*{idEmpleado}"/>
+							<div>
+								<label for="nombre">Nombre:</label> 
+								<input style="margin-left: 95px;" type="text" name="nombre" th:field="*{nombre}" />
+								<span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" style="color: red">Error Nombre</span>
+							</div>
+							<br />
+							<div>
+								<label for="apellido">Apellido:</label> 
+								<input style="margin-left: 95px;" type="text" name="apellido" th:field="*{apellido}" />
+								<span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" style="color: red">Error Apellido</span>
+							</div>
+							<br />
+							<div>
+								<label for="celular">Celular:</label> 
+								<input style="margin-left: 104px;" type="tel" name="celular" th:field="*{celular}" />
+								<span th:if="${#fields.hasErrors('celular')}" th:errors="*{celular}" style="color: red">Error Celular</span>
+								
+							</div>
+							<br />
+							<div>
+								<label for="dni">DNI:</label> 
+								<input style="margin-left: 125px;" type="text" name="dni" th:field="*{dni}"/>
+								<span th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}" style="color: red">Error DNI</span>
+							</div>
+							<br />
+							<div>
+								<label for="fechaInicio">Fecha Inicio:</label> 
+								<input style="margin-left: 70px;" type="text" placeholder="dd-mm-yyyy" name="fechaInicio" th:field="*{fechaInicio}"/>							
+								<span th:if="${#fields.hasErrors('fechaInicio')}" th:errors="*{fechaInicio}" style="color: red">Error DNI</span>							
+							</div>
+							<br />
+							<div>
+								<label for="fechaNacimiento">Fecha Nacimiento:</label>
+								 <input style="margin-left: 28px;" type="text" placeholder="dd-mm-yyyy" name="fechaNacimiento" th:field="*{fechaNacimiento}"/>
+								<span th:if="${#fields.hasErrors('fechaNacimiento')}" th:errors="*{fechaNacimiento}" style="color: red">Error DNI</span>
+							</div>
+							<br />
+							<input type="hidden" name="createAt" value="2021/12/10" />
+							<div>
+								<button type="submit" name="guardar" class="btn btn-primary"  th:value="#{accion.guardar}">Guardar Empleado</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

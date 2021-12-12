@@ -1,0 +1,12 @@
+INSERT INTO `db_recursos_humanos`.`tb_empleado` (`id_empleado`, `apellido`, `celular`, `create_at`, `create_by_id`, `dni`, `fecha_inicio`, `fecha_nacimiento`, `nombre`, `update_at`, `update_by_id`) VALUES ('3', 'Vega Diaz', '981883164', '2021-11-12', '1', '78642530', '2021-11-12', '2021-11-12', 'Joseph', '2021-11-12', '1');
+INSERT INTO `db_recursos_humanos`.`tb_empleado` (`id_empleado`, `apellido`, `celular`, `create_at`, `create_by_id`, `dni`, `fecha_inicio`, `fecha_nacimiento`, `nombre`, `update_at`, `update_by_id`) VALUES ('4', 'Torres Aguilar', '987456321', '2021-11-12', '1', '7845123', '2021-11-12', '2021-11-12', 'María', '2021-11-12', '1');
+INSERT INTO `db_recursos_humanos`.`tb_empleado` (`id_empleado`, `apellido`, `celular`, `create_at`, `create_by_id`, `dni`, `fecha_inicio`, `fecha_nacimiento`, `nombre`, `update_at`, `update_by_id`) VALUES ('1', 'Contreras Mamaní', '981812164', '2021-11-12', '1', '9856216', '2021-11-12', '2021-11-12', 'Oscar', '2021-11-12', '1');
+INSERT INTO `db_recursos_humanos`.`tb_empleado` (`id_empleado`, `apellido`, `celular`, `create_at`, `create_by_id`, `dni`, `fecha_inicio`, `fecha_nacimiento`, `nombre`, `update_at`, `update_by_id`) VALUES ('5', 'Aguilar Melendez', '900083164', '2021-11-12', '1', '0532641', '2021-11-12', '2021-11-12', 'Angela', '2021-11-12', '1');
+INSERT INTO `db_recursos_humanos`.`tb_empleado` (`id_empleado`, `apellido`, `celular`, `create_at`, `create_by_id`, `dni`, `fecha_inicio`, `fecha_nacimiento`, `nombre`, `update_at`, `update_by_id`) VALUES ('6', 'Alvarado Diaz', '981000164', '2021-11-12', '1', '08554875', '2021-11-12', '2021-11-12', 'Estefany', '2021-11-12', '1');
+INSERT INTO `db_recursos_humanos`.`tb_empleado` (`id_empleado`, `apellido`, `celular`, `create_at`, `create_by_id`, `dni`, `fecha_inicio`, `fecha_nacimiento`, `nombre`, `update_at`, `update_by_id`) VALUES ('7', 'Lopez Huaman', '981883000', '2021-11-12', '1', '73985620', '2021-11-12', '2021-11-12', 'Maria', '2021-11-12', '1');
+
+INSERT INTO `db_recursos_humanos`.`tb_usuario` (`id_usuario`, `username`, `password`) VALUES ('1', 'admin', '$2a$10$fSiahKcC2b5GPWes8Vzv7.dbKNUUPxksoRceXL9wcKto2mYOLQp9u');
+INSERT INTO `db_recursos_humanos`.`tb_usuario` (`id_usuario`, `username`, `password`) VALUES ('2', 'user', '$2a$10$UbNLcro9IvTjuNRKirnSN.7qpvUIYQrCvldRHK4AczVdXFtPkNK5a');
+
+INSERT INTO `db_recursos_humanos`.`tb_rol` (`id_rol`, `nombre`, `id_usuario`) VALUES ('1', 'ROLE_ADMIN', '1');
+INSERT INTO `db_recursos_humanos`.`tb_rol` (`id_rol`, `nombre`, `id_usuario`) VALUES ('2', 'ROLE_USER', '2');

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Login</title>
+<meta charset="UTF-8" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<section id="login">
+		<div class="container" style="margin-top: 50px">
+			<div class="row">
+				<div class="col-md-6 mx-auto">
+					<div class="card">
+						<div class="card-header">
+							<h4>Login</h4>
+						</div>
+						<div class="card-body">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<form method="POST" th:action="@{/login}">
+											<div class="form-group">
+												<label for="username">Username:</label> <input type="text"
+													name="username" id="username" required style="margin-top: 10px;"
+													 />
+											</div>
+											<br />
+											<div class="form-group">
+												<label for="password">Password:</label> <input
+													type="password" name="password" id="password" required style="margin-top: 10px;"
+													 />
+											</div>
+											<br /> <input type="submit" value="Login"
+												class="btn btn-primary btn-block" style="width: 85%;"/>
+										</form>
+									</div>
+									<div class="col">
+										<img src="https://i.ibb.co/xXGYtYz/login.png"
+											class="img-thumbnail" alt="empleado"
+											style="width: 200px; height: 150px; margin: 10px;">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+</body>
+</html>
